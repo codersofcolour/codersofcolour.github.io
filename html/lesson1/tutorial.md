@@ -18,7 +18,7 @@ In this tutorial we are going to look at:
 
 ### Goal
 
-By the end of this tutorial you will have built [this webpage.](http://codebar.github.io/tutorials/html/lesson1/example.html "I love owls")
+By the end of this tutorial you will have built [a webpage about someone who inspires you.](http://codebar.github.io/tutorials/html/lesson1/example.html "All About Beyonce"). We will use Beyonce in this tutorial, but you are encouraged to create a webpage about any person who inspires you.
 
 #### What is HTML?
 
@@ -87,7 +87,7 @@ Using what we just learnt, and with guidance from your coach, create the followi
 
 > If you load this in your browser, do you see anything on the page?
 
-Now inside your head tag create a `<title>` tag with **I love owls** as your title.
+Now inside your head tag create a `<title>` tag with **My Inspirations** as your title.
 
 > You should see that the tab bar has changed. If not, double check your code.
 
@@ -95,7 +95,7 @@ Now inside your head tag create a `<title>` tag with **I love owls** as your tit
 <!DOCTYPE html>
 <html>
   <head>
-    <title>I love owls</title>
+    <title>My Inspirations</title>
   </head>
   <body>
   </body>
@@ -117,19 +117,21 @@ Headings come in 6 sizes
 
 A `h1` defines the most important heading whereas a `h6` defines the least important.
 
-Add a `h1` heading tag, which includes the word Owls, inside the body tag of your page.
+Add a `h1` heading tag with the text "Beyonce Knowles" inside the body tag of your page.
 
 ### Element: Paragraph `<p>`
 
 Putting content into a `<p>` tag will break your text up into paragraphs. This helps make the content of your page easier to read for the user.
 
-Add the following paragraph inside your `<body>` tag, after the `<h1>`:
+Add an intro paragraph about your subject inside your `<body>` tag, after the `<h1>`:
 
 ```html
 <p>
-  Most birds of prey sport eyes on the sides of their heads,
-  but the stereoscopic nature of the owl's forward-facing eyes permits the greater
-  sense of depth perception necessary for low-light hunting.
+  Beyoncé Giselle Knowles-Carter (born September 4,
+  1981) is an American singer, songwriter, record producer and actress.
+  Born and raised in Houston, Texas, she performed in various singing and dancing
+  competitions as a child and rose to fame in the late 1990s as lead singer of
+  R&B girl-group Destiny's Child.
 </p>
 ```
 
@@ -137,10 +139,10 @@ Add the following paragraph inside your `<body>` tag, after the `<h1>`:
 
 A link lets the user click through to another webpage. We use the attribute `href` to indicate where you want the user to go.
 
-Let's add a link to the bottom of your paragraph:
+Let's add a link at the end of the paragraph:
 
 ```html
-<a href="http://en.wikipedia.org/wiki/Owl">More information about owls...</a>
+<a href="http://beyonce.com">Official Website</a>
 ```
 
 ### Element: Div `<div>`
@@ -151,12 +153,14 @@ Wrap your existing paragraph and link in a div and add a new heading to it.
 
 ```html
 <div>
-  <h1>Owls</h1>
+  <h1>Beyonce Knowles</h1>
   <p>
-    Most birds of prey sport eyes on the sides of their heads,
-    but the stereoscopic nature of the owl's forward-facing eyes permits the greater
-    sense of depth perception necessary for low-light hunting.
-    <a href="http://en.wikipedia.org/wiki/Owl">More information about owls...</a>
+    Beyoncé Giselle Knowles-Carter (born September 4,
+    1981) is an American singer, songwriter, record producer and actress.
+    Born and raised in Houston, Texas, she performed in various singing and dancing
+    competitions as a child and rose to fame in the late 1990s as lead singer of
+    R&B girl-group Destiny's Child.
+    <a href="http://beyonce.com">Official Website</a>
   </p>
 </div>
 ```
@@ -166,14 +170,15 @@ Wrap your existing paragraph and link in a div and add a new heading to it.
 There are two types of lists that can included on a webpage, **ordered** and **unordered**.
 An unordered list `<ul>` is defined with bullets whilst an ordered list `<ol>` uses a numbered sequence.
 
-Let's create a new `<h2>` then underneath list the reasons we love owls:
+Let's create a new `<h2>` then underneath list the reasons why this person
+inspires us:
 
 ```html
-<h2>Why do I like owls so much?</h2>
+<h2>Reasons why Beyonce inspires me</h2>
 <ol>
-  <li>they are adorable</li>
-  <li>and lovely</li>
-  <li>and cuddly</li>
+  <li>She is one of the most successful female soloists in history</li>
+  <li>She uses her art to call out social and political injustice</li>
+  <li>She is a positive role model for young women and men</li>
 </ol>
 ```
 
@@ -183,15 +188,7 @@ Let's create a new `<h2>` then underneath list the reasons we love owls:
 
 So far we've learned a lot about how to add text to our page. Now let's add some images!
 
-Before we start, we'll need to add the image files we want to use to the project folder.  It's very important to keep images in their own folder, so first, create a folder called 'images' inside the same folder as your HTML file.  Next, download the images you'll need. Do this by right clicking on each of the following links, select 'Save Link As...', and save it to the images folder you just created:
-
-* [logo.png](/html/lesson1/images/logo.png "logo.png")
-* [img1.jpg](/html/lesson1/images/img1.jpg "img1.jpg")
-* [img2.jpg](/html/lesson1/images/img2.jpg "img2.jpg")
-* [img3.jpg](/html/lesson1/images/img3.jpg "img3.jpg")
-* [img4.jpg](/html/lesson1/images/img4.jpg "img4.jpg")
-* [img5.jpg](/html/lesson1/images/img5.jpg "img5.jpg")
-* [img6.jpg](/html/lesson1/images/img6.jpg "img6.jpg")
+Before we start, we'll need to add the image files we want to use to the project folder.  It's very important to keep images in their own folder, so first, create a folder called 'images' inside the same folder as your HTML file.  Next, download at least five images of your subject to this folder. To do this, right-click on the image, click 'Save Image As', navigate to your /images directory, and save the image there. For this tutorial, we've named them 'img01.jpg', 'img02.jpg' and so forth, but feel free to use different filenames and change your code accordingly!
 
 Images are primarily made up of three attributes
 
@@ -203,7 +200,7 @@ In order for us to see this image on the webpage we need to link to the image, t
 
 ```html
 <div>
-  <img src="images/logo.png" alt="codebar.io">
+  <img src="images/img01.jpg" alt="Beyonce">
 </div>
 ```
 
@@ -211,13 +208,13 @@ Here you can see we have told the `src` of the image to look in the images folde
 
 Let's add some more images. This time, we'll put them in a list.
 
-Do this underneath the `<h2>Why do I like owls so much?</h2>` heading.
+Do this underneath the `<h2>Reasons why Beyonce inspires me</h2>` heading.
 
 ```html
 <ul>
-  <li><img src="images/img1.jpg" alt="adorable"></li>
-  <li><img src="images/img2.jpg" alt="lovely"></li>
-  <li><img src="images/img3.jpg" alt="cuddly"></li>
+  <li><img src="images/img01.jpg" alt="portrait"></li>
+  <li><img src="images/img02.jpg" alt="Super Bowl"></li>
+  <li><img src="images/img03.jpg" alt="Lemonade"></li>
 </ul>
 ```
 
@@ -227,15 +224,14 @@ Links can contain many elements - not just text.
 
 Let's use some pictures and text to link to a video. It can be handy when we want the user to get to where we want without needing to click on text.
 
-Add this underneath the ordered list about why we like owls.
+Add this underneath the ordered list about why Beyonce is inspirational.
 
 ```html
 <div>
-  <a href="http://www.youtube.com/watch?v=gBjnfgnwXic">
-    <img src="images/img4.jpg" alt="cute owl">
-    <img src="images/img5.jpg" alt="another cute owl">
+  <a href="https://youtu.be/ZJRnLUI1EZ0?list=PLnHDtJ54PUGWUCaUoFWMZa9zkOLGxu8Pm">
+    <img src="images/img04.jpg" alt="Link to video">
     <br/>
-    Watch the video
+    Watch the Lemonade video
   </a>
 </div>
 ```
@@ -243,50 +239,22 @@ Add this underneath the ordered list about why we like owls.
 > Click any of the images. Can you get to the link's page?
 > What happens if you take the `<br/>` tag out? Remember to put it back afterwards!
 
+If you have more images, add them into your page anywhere you like.
+
 ## Formatting text
 
 We can also **emphasise** or make text *important*.
 For emphasis we use `<strong>` and for importance `<em>`
 
-Let's emphasise some of the content of your paragraph
+Let's add a new paragraph after the first one and emphasise some of the content.
 
 ```html
 <p>
-  Most birds of prey sport eyes on the sides of their heads,
-  but the stereoscopic nature of
-  the owl's forward-facing <strong>eyes permits the greater
-  sense of depth perception</strong> necessary for low-light hunting.
+  Beyoncé has stated that she is personally inspired by US First Lady Michelle
+  Obama, saying <strong>"She proves you can do it all"</strong> and she has described Oprah
+  Winfrey as <em>"the definition of inspiration and a strong woman"</em>.
 </p>
 ```
-
-### Special characters and more formatting
-
-Some characters have special meaning in HTML. For instance, we use `<` and `>` to make HTML tags, and we use " to wrap our attributes. But what if we wanted to use those characters in our page?
-
-One way is to use **HTML entities**. These are made up of an ampersand, a name, then a semicolon. Here's the HTML entity for a quote character: `&quot;`.
-
-You can also use a numerical format to produce special characters. [Here's a list](http://htmlandcssbook.com/extras/html-escape-codes/) of some common entities.
-
-Add a small rhyme to your page, wrapped with quotes using HTML entities.
-
-```html
-<div>
-  <p>
-    <strong>
-      <em>
-       &quot;A wise old owl sat on an oak;  The more he saw the less he spoke; <br>
-       The less he spoke the more he heard; Why aren't we like that wise old bird?&quot;
-      </em>
-    </strong>
-  </p>
-  <small>&mdash; nursery rhyme</small>
-</div>
-```
-
-`<small>` is another html formatting element that you can use.
-
-> Have you noticed how the character `&mdash;` renders on the page?
-
 ### mailto links `<a>`
 
 Links can also open up a user's email client and share content. The difference between links and mailto links is the content defined in the **href** attribute.
@@ -294,10 +262,10 @@ Links can also open up a user's email client and share content. The difference b
 ```html
 <ul>
   <li>
-     <a href="mailto:social@codebar.io?subject=I love owls :: codebar">Email us</a>
+     <a href="mailto:me@mywebsite.com?subject=I love Beyonce too!">Email me</a>
   </li>
   <li>
-     <a href="mailto:?subject=I love owls :: codebar">Email a friend</a>
+     <a href="mailto:?subject=I love Beyonce too!">Email a friend</a>
   </li>
 </ul>
 ```
@@ -306,7 +274,7 @@ Links can also open up a user's email client and share content. The difference b
 
 > What happens when you click the second link? How is it different?
 
-> What happens when you add `&body=Owls are amazing` to the second link?
+> What happens when you add `&body=Beyonce is amazing` to the second link?
 
 ### Commenting
 
@@ -323,13 +291,14 @@ You can use a special kind of tag to add notes to our page that the computer wil
 Add a share on twitter link along with your other sharing links.
 
 ```html
-<a href="http://twitter.com/home?status=I love owls! via @codebar">Share your love of owls on twitter</a>
+<a href="http://twitter.com/home?status=I just build my first webpage at Coders of Colour">Share your work on twitter</a>
 ```
 -----
-This ends our first lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)
+This ends our first lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments.
 
-## Further reading
+## Further resources
 
+* [Codecademy Interactive HTML Tutorial](https://www.codecademy.com/learn/web)
 * [HTML elements](https://developer.mozilla.org/en/docs/Web/HTML/Element)
 * [Special characters](http://htmlandcssbook.com/extras/html-escape-codes)
 * [The Bare Bones Guide to HTML](http://werbach.com/barebones/barebones.html)
